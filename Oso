@@ -1,0 +1,9 @@
+void main () {}
+  rect(40, 40, 240, 240,);
+// Orejas
+  ellipse (100, 100, 70, 70) ;
+  ellipse (220, 100, 70, 70) ;
+// Cabeza 
+  ellipse (160, 160, 150, 150) ;
+// Ojos 
+  ellipse (140, 140, 30, 50) ;
