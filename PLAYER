@@ -11,7 +11,7 @@ void ejecutar (){
 
 void player () {
   background(255,205,0);
-  ellipse (x, y, 10, 15);
+  ellipse (x, y, 25, 25);
 }
 
 void controles (){
@@ -30,4 +30,16 @@ if (keyPressed && key=="left") {
 if (keyPressed && key=="right") {
     println ("derecha");
     x= x+1;
+}
+if (x==0) {
+   x= 120;
+ }
+if (x==320) {
+  x=120;
+}
+if (y==0) {
+  y=120;
+}
+if (y==320){
+  y=120;
 }}
