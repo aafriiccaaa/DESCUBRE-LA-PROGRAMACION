@@ -1,0 +1,13 @@
+void main (){
+  animate (temporizador);
+}
+
+void temporizador (){
+  println (millis());
+
+if (millis()>5000) {
+  background(143,150,239);
+}
+while ((millis()>5000)) {
+  
+}
