@@ -22,7 +22,3 @@ void imagen (){
     background(255,0,0);
     ellipse(mouseX,mouseY, 50,50); 
   }
-    
-    
-    
-  
