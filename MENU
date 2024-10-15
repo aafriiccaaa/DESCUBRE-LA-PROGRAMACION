@@ -1,0 +1,21 @@
+void dibuja () {
+  background(253,212,202);
+  if (mousePressed) {
+    if (mouseButton==LEFTBUTTON) {
+      ellipse (mouseX, mouseY,20,20);
+      animate (otra);
+    }}}
+
+
+
+
+
+
+void main () {
+  animate (dibuja);
+}
+
+void otra () {
+  background(253,212,202);
+  text ("PLAY"
+}
