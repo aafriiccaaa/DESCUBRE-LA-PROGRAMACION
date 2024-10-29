@@ -95,8 +95,15 @@ void play(){
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
-    
-}}
+    text ("OBJETIVO:llegar a las recompensas", 05,70);
+    text ("para subir de nivel", 05,90);
+    text ("INSTRUCCIONES DE JUEGO:", 05,130);
+    text ("Si el player toca las esquinas", 05,170);
+    text ("volverá al punto inicial", 10,190);
+    text ("Persigue los puntos aleatorios que", 10,220);
+    text ("se presentan en la pantalla", 10, 240);
+  }}
+          
 void credit(){
   background(199,247,203);
   imagenEXIT ();
