@@ -1,5 +1,7 @@
 int x= 160;
 int y= 160;
+int z= random(320);
+int t= random (320);
 
 void main () {
   animate (ejecutar);
@@ -7,10 +9,14 @@ void main () {
 void ejecutar (){
   player ();
   controles ();
+  enemigo ();
+}
+void enemigo (){
+  ellipse (z,t,25,25);
 }
 
 void player () {
-  background(255,205,0);
+  background(108,135,52);
   ellipse (x, y, 25, 25);
 }
 
