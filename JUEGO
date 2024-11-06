@@ -13,11 +13,29 @@ void ejecutar (){
 }
 void enemigo (){
   ellipse (z,t,25,25);
+  fill(239,209,40);
+  int vel= 2;
+  z= z+vel;
+  t= t+vel;
+  
+  //CONDICIONES(MARGENES)
+if (z<0) {
+   z= 10;
+ }
+if (z>320) {
+  z=10;
 }
+if (t<0) {
+  t=10;
+}
+if (t>320){
+  t=10;
+}}
 
 void player () {
-  background(108,135,52);
+  background(39,100,28);
   ellipse (x, y, 25, 25);
+  fill(173,0,0);
 }
 
 void controles (){
