@@ -1,115 +1,51 @@
+int x= 160;
+int y= 160;
+int z= random(320);
+int t= random (320);
+
 void main () {
-animate (menu);
+  animate (ejecutar);
 }
-void menu(){
-
-  controlBTN1();
-  imagenBTN1();
-  controlBTN2 ();
-  imagenBTN2 ();
-  controlBTN3 ();
-  imagenBTN3 ();
+void ejecutar (){
+  player ();
+  controles ();
+  enemigo ();
 }
-void imagenBTN1 (){
-  fill(43,161,203);
-  rect (120,120,80,80);
-  fill(0,0,0);
-  text ("PLAY", 137,170);
-}
-void imagenBTN2 (){ 
-  fill(161,201,249);
-  rect (10,15,55,20);
-  fill(38,35,35);
-  text ("menu", 15,30);
-  
-}
-void imagenBTN3 (){
-  fill(161,201,249);
-  rect (245,15,65,20);
-  fill(38,35,35);
-  text ("credits", 250,30);
+void enemigo (){
+  ellipse (z,t,25,25);
 }
 
- void controlBTN1(){
-  background(16,61,84);
-  println ("X: " + mouseX);
-  println ("Y: " + mouseY);
-  if (mousePressed) {
-    if (mouseButton == LEFTBUTTON){
-      if (mouseX > 120 && mouseX < 200 &&  mouseY > 120 && mouseY < 200) {
-        background(249,162,128);
-       animate(play);
-      }}}}
-void controlBTN2 () {
-       
-  println ("X: " + mouseX);
-  println ("Y: " + mouseY);
-  if (mousePressed) {
-    if (mouseButton == LEFTBUTTON){
-      if (mouseX > 10 && mouseX < 65 &&  mouseY > 15 && mouseY < 35) {
-        background(0,0,0);
-       animate(MENU);
-      }}}}
-void controlBTN3 (){
-   println ("X: " + mouseX);
-  println ("Y: " + mouseY);
-  if (mousePressed) {
-    if (mouseButton == LEFTBUTTON){
-      if (mouseX > 245 && mouseX < 310 &&  mouseY > 15 && mouseY < 35) {
-        background(0,0,0);
-       animate(credit);
-      }}}}
+void player () {
+  background(108,135,52);
+  ellipse (x, y, 25, 25);
+}
 
-
-void imagenEXIT (){
-  fill(160,239,108);
-  rect (17,02,30,17);
-  fill(38,35,35);
-  text ("exit", 17,17);
-} 
-
- void controlEXIT(){
- // background(239,243,245);
-  println ("X: " + mouseX);
-  println ("Y: " + mouseY);
-  if (mousePressed) {
-    if (mouseButton == LEFTBUTTON){
-      if (mouseX > 17 && mouseX < 47 &&  mouseY > 2 && mouseY < 49) {
-        background(34,112,19);
-       animate(menu);
-      }}}}
-
-void play(){
-  background(8,100,16);
-  imagenEXIT ();
-  controlEXIT();
-  if (mousePressed){}
-  if (mouseButton == LEFTBUTTON){
-    ellipse (10,10,10,10);
+void controles (){
+  if (keyPressed && key=="up") {
+    println ("arriba");
+    y= y-1;
   }
+if (keyPressed && key=="down"){
+  println ("abajo");
+  y= y+1;
 }
-        void MENU(){
-          background(162,175,9);
-          imagenEXIT ();
-  controlEXIT();
-  if (mousePressed){}
-  if (mouseButton == LEFTBUTTON){
-    ellipse (10,10,10,10);
-    text ("OBJETIVO:llegar a las recompensas", 05,70);
-    text ("para subir de nivel", 05,90);
-    text ("INSTRUCCIONES DE JUEGO:", 05,130);
-    text ("Si el player toca las esquinas", 05,170);
-    text ("volverá al punto inicial", 10,190);
-    text ("Persigue los puntos aleatorios que", 10,220);
-    text ("se presentan en la pantalla", 10, 240);
-  }}
-          
-void credit(){
-  background(199,247,203);
-  imagenEXIT ();
-  controlEXIT();
-  if (mousePressed){}
-  if (mouseButton == LEFTBUTTON){
-    ellipse (10,10,10,10);
-    text ("by África Párraga Hernández",40,180);
-  }}
+if (keyPressed && key=="left") {
+    println ("izquierda");
+    x= x-1;
+}
+if (keyPressed && key=="right") {
+    println ("derecha");
+    x= x+1;
+}
+if (x==0) {
+   x= 120;
+ }
+if (x==320) {
+  x=120;
+}
+if (y==0) {
+  y=120;
+}
+if (y==320){
+  y=120;
+}}
