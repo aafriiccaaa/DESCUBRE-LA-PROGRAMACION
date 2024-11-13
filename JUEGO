@@ -2,6 +2,7 @@ int x= 160;
 int y= 160;
 int z= random(320);
 int t= random (320);
+int puntos=0;
 
 void main () {
   animate (ejecutar);
@@ -10,6 +11,7 @@ void ejecutar (){
   player ();
   controles ();
   enemigo ();
+  puntuacion ();
 }
 void enemigo (){
   ellipse (z,t,25,25);
@@ -41,19 +43,19 @@ void player () {
 void controles (){
   if (keyPressed && key=="up") {
     println ("arriba");
-    y= y-1;
+    y= y-3;
   }
 if (keyPressed && key=="down"){
   println ("abajo");
-  y= y+1;
+  y= y+3;
 }
 if (keyPressed && key=="left") {
     println ("izquierda");
-    x= x-1;
+    x= x-3;
 }
 if (keyPressed && key=="right") {
     println ("derecha");
-    x= x+1;
+    x= x+3;
 }
 if (x==0) {
    x= 120;
@@ -67,3 +69,18 @@ if (y==0) {
 if (y==320){
   y=120;
 }}
+
+//PUNTOS
+void puntuacion(){
+  fill(255,229,0);
+  text ("0 PUNTOS",10,20);
+}
+
+if (x==z) {
+  puntos=puntos+10;
+  animate (puntuacion);
+}
+
+if (y==t) {
+  puntos=puntos+10;
+}
