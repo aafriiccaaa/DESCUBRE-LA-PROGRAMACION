@@ -9,7 +9,7 @@ void menu(){
   imagenBTN2 ();
   controlBTN3 ();
   imagenBTN3 ();
- // winner ();
+  
 }
 void imagenBTN1 (){
   fill(43,161,203);
@@ -71,7 +71,6 @@ void imagenEXIT (){
 } 
 
  void controlEXIT(){
- //background(239,243,245);
   println ("X: " + mouseX);
   println ("Y: " + mouseY);
   if (mousePressed) {
@@ -112,6 +111,7 @@ int y= 160;
 int z= random(320);
 int t= random (320);
 int puntos=0;
+int t1=second ();
 
 
 void ejecutar (){
@@ -184,21 +184,25 @@ void puntuacion(){
 
 
 if (x-10<z && x+10>z){
-  puntos=puntos+10;
-}}
+ // puntos=puntos+10;
+
 
 if (y-10<t && y+10>t){
   puntos=puntos+10;
-  
+}}
 if (puntos==1000){
   animate (winner);
-}
-}
+
+}}
 
 //WINNER
-void winner () {
-  background(120,186,251);
-  text ("WINNER",100,100);
+void winner(){
+   background(65,94,122);
+  text ("¡WINNER!",120,150);
 }
-   
 
+//LOSER
+void loser () {
+background (65,94,122);
+text ("LOSER",120,150);
+}
