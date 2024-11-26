@@ -87,12 +87,12 @@ void imagenEXIT (){
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
-    text ("OBJETIVO:llegar a las recompensas", 05,70);
-    text ("para subir de nivel", 05,90);
+    text ("OBJETIVO:llegar a 1000 puntos",05,70);
+    text ("para ganar",05,90);
     text ("INSTRUCCIONES DE JUEGO:", 05,130);
-    text ("Si el player toca las esquinas", 05,170);
+    text ("Si el player toca las esquinas", 10,170);
     text ("volverá al punto inicial", 10,190);
-    text ("Persigue los puntos aleatorios que", 10,220);
+    text ("Persigue el punto aleatorio que",10,220);
     text ("se presentan en la pantalla", 10, 240);
   }}
           
@@ -112,6 +112,7 @@ int z= random(320);
 int t= random (320);
 int puntos=0;
 int t1=second ();
+int a= t1 -second ();
 
 
 void ejecutar (){
@@ -184,7 +185,7 @@ void puntuacion(){
 
 
 if (x-10<z && x+10>z){
- // puntos=puntos+10;
+
 
 
 if (y-10<t && y+10>t){
@@ -193,7 +194,9 @@ if (y-10<t && y+10>t){
 if (puntos==1000){
   animate (winner);
 
-}}
+if (a<= 10 && puntos<1000) {
+  animate (loser);
+}}}
 
 //WINNER
 void winner(){
@@ -204,5 +207,5 @@ void winner(){
 //LOSER
 void loser () {
 background (65,94,122);
-text ("LOSER",120,150);
+text ("GAME OVER", 120, 150);
 }
